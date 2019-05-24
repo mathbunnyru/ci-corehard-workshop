@@ -1,4 +1,10 @@
 language: cpp
+dist: trusty
+
+before_install:
+  - eval "${MATRIX_EVAL}"
+
+sudo: required
 
 install:
   # Install conan
