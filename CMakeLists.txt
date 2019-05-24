@@ -35,7 +35,6 @@ add_executable(test_${PROJECT_NAME} ${TEST_SRCS})
 target_link_libraries(test_${PROJECT_NAME}
     ${PROJECT_NAME}
     ${CONAN_LIBS}
-    gtest
 )
 
 enable_testing()
