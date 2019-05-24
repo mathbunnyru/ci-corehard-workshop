@@ -3,7 +3,8 @@ variables:
     CONAN_REFERENCE: "hello/0.1.0"
     CONAN_CHANNEL: "testing"
     CONAN_LOGIN_USERNAME: "admin"
-    
+    CONAN_UPLOAD: "http://185.185.69.20:8081/artifactory/api/conan/conan-local"
+
 .build-template: &build-template
     before_script:
         - sudo pip install --upgrade conan conan_package_tools
