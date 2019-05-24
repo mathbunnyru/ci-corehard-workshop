@@ -1,0 +1,18 @@
+variables:
+    CONAN_USERNAME: "admin"
+    CONAN_REFERENCE: "hello/0.1.0"
+    CONAN_CHANNEL: "testing"
+    CONAN_LOGIN_USERNAME: "admin"
+    
+.build-template: &build-template
+    before_script:
+        - sudo pip install --upgrade conan conan_package_tools
+        - conan user
+    script:
+        - python build.py
+
+gcc-6:
+    image: lasote/conangcc6
+    variables:
+        CONAN_GCC_VERSIONS: "6"
+    <<: *build-template
