@@ -2,7 +2,7 @@ language: cpp
 
 install:
   # Install conan
-  - pip install --user -g conan
+  - pip install --user -q conan
   # Automatic detection of your arch, compiler, etc.
   - conan user
 
