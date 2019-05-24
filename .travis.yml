@@ -8,7 +8,7 @@ sudo: required
 
 install:
   # Install conan
-  - pip install --user -q conan
+  - sudo -E pip install -q conan
   # Automatic detection of your arch, compiler, etc.
   - conan user
 
